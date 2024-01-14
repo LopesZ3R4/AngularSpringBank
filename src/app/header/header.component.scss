@@ -1,0 +1,51 @@
+/* header.component.scss */
+@import '../../variables';
+
+// Base styles for the header
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+// Styles for the logo and navigation links
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    &:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+  }
+}
+
+// Responsive styles remain the same
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    .nav-links {
+      flex-direction: column;
+      width: 100%; // Full width for mobile
+      a {
+        text-align: center; // Center-align the text for mobile
+        width: 100%; // Full width for mobile
+        padding: 0.5rem; // Adjust padding as needed for mobile
+      }
+    }
+  }
+}

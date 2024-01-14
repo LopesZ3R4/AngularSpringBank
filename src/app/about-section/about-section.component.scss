@@ -1,0 +1,13 @@
+// About section styles
+@import '../../variables';
+.about-section {
+  padding: 4rem 2rem;
+  h2 {
+    font-weight: 600;
+    color: $heading-color;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-weight: 400;
+  }
+}

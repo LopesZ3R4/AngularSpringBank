@@ -1,0 +1,53 @@
+/* main-banner.component.scss */
+@import '../../variables';
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #4CAF50;
+  color: white;
+
+  .welcome-text {
+
+  }
+
+  .signup-invitation {
+    // Styles for the signup invitation form
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    h2 {
+      color: black;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 0.5rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#4CAF50, 10%);
+      }
+      &:disabled {
+        background-color: #ccc;
+      }
+    }
+  }
+}

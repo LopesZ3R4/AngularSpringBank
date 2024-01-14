@@ -1,0 +1,18 @@
+// News updates styles
+@import '../../variables';
+
+.news-updates {
+  background-color: $background-accent;
+  padding: 4rem 2rem;
+  .news-item {
+    margin-top: 2rem;
+    p {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+}

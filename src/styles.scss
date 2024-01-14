@@ -1,0 +1,27 @@
+// 1. SCSS Variable Definitions
+@import 'variables';
+// 2. Global Styles
+body, html {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// 3. Anchor Tag Styling
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 4. Imports (Google Fonts or other)
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');

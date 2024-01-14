@@ -1,0 +1,14 @@
+<!-- main-banner.component.html -->
+<div class="main-banner">
+  <div class="welcome-text">
+    <h1>Welcome to Spring Bank</h1>
+    <p>Your trusted financial partner.</p>
+  </div>
+  <div class="signup-invitation">
+    <h2>Peça sua conta e cartão de<br>crédito do Spring Bank</h2>
+    <form (submit)="goToDetailsForm(cpf.value)" #cpfForm="ngForm">
+      <input type="text" name="cpf" #cpf="" required placeholder="059.909.221-16">
+      <button type="submit" [disabled]="!cpfForm.valid">Continuar</button>
+    </form>
+  </div>
+</div>

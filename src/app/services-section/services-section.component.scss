@@ -1,0 +1,18 @@
+// Services section styles
+@import '../../variables';
+
+.services-section {
+  background-color: $background-alt;
+  padding: 4rem 2rem;
+  .service {
+    margin-top: 2rem;
+    h3 {
+      font-weight: 600;
+      color: $heading-color;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+}
