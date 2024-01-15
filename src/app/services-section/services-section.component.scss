@@ -1,18 +1,36 @@
-// Services section styles
 @import '../../variables';
 
+/* services-section.component.scss */
 .services-section {
-  background-color: $background-alt;
-  padding: 4rem 2rem;
-  .service {
-    margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 2rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #333;
+
+  .service-card {
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px;
+    margin: 1rem;
+
     h3 {
-      font-weight: 600;
       color: $heading-color;
-      margin-bottom: 0.5rem;
     }
+
     p {
-      font-weight: 400;
+      color: $text-color;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
   }
 }
