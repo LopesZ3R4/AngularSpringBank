@@ -16,13 +16,13 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '18.16.1'
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli@16.2.11
 
     - name: Install Dependencies
       run: npm install
-
-    - name: Install Angular CLI
-      run: npm install -g @
 
     - name: Build Angular App
       run: ng build --prod
