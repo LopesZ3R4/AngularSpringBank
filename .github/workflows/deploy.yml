@@ -1,0 +1,51 @@
+name: Deploy Angular App to EC2
+
+on:
+  push:
+    branches:
+      - main  # ou o branch que você deseja para o deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'  # ou a versão do Node.js que você está usando
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Angular App
+      run: ng build --prod
+
+    - name: Deploy to EC2
+      env:
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        HOST: ${{ secrets.HOST }}
+        PORT: ${{ secrets.PORT }}
+        USERNAME: ${{ secrets.USERNAME }}
+        DEST_PATH: '/home/ec2-user/AngularSpringBank/'
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -p $PORT -H "$HOST" >> ~/.ssh/known_hosts
+        scp -P $PORT -r ./dist/angular-spring-bank/* $USERNAME@$HOST:$DEST_PATH
+    - name: Restart Nginx
+      env:
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        HOST: ${{ secrets.HOST }}
+        PORT: ${{ secrets.PORT }}
+        USERNAME: ${{ secrets.USERNAME }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -p $PORT -H "$HOST" >> ~/.ssh/known_hosts
+        ssh -p $PORT $USERNAME@$HOST 'sudo systemctl restart nginx'
