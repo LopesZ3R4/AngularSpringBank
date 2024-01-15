@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainBannerComponent } from './main-banner/main-banner.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
@@ -19,7 +18,6 @@ import { FormsModule } from "@angular/forms";
   declarations: [
     AppComponent,
     HeaderComponent,
-    WelcomeComponent,
     FooterComponent,
     MainBannerComponent,
     ServicesSectionComponent,
