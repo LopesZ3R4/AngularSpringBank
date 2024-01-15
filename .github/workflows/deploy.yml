@@ -33,7 +33,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         PORT: ${{ secrets.PORT }}
         USERNAME: ${{ secrets.USERNAME }}
-        DEST_PATH: '/home/ec2-user/AngularSpringBank/'
+        DEST_PATH: '/home/ec2-user/AngularSpringBank/dist/angular-spring-bank'
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/id_rsa
