@@ -3,7 +3,7 @@ name: Deploy Angular App to EC2
 on:
   push:
     branches:
-      - main  # ou o branch que você deseja para o deploy
+      - master
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'  # ou a versão do Node.js que você está usando
+        node-version: '12.x'
 
     - name: Install Dependencies
       run: npm install
