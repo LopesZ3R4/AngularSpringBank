@@ -1,6 +1,7 @@
 // register-form.component.ts
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-register-form',
@@ -9,12 +10,16 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class RegisterFormComponent implements OnInit {
   user = {
-    cpf: '',
-    fullName: '',
-    email: '',
+    chavePix: '',
+    accountHolderName: '',
+    cpf: ''
   };
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -25,6 +30,17 @@ export class RegisterFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.user);
+    const endpoint = 'http://18.189.140.162:8080/api/useraccount';
+    this.http.post(endpoint, this.user).subscribe({
+      next: (response) => {
+        console.log('Cadastro realizado com sucesso:', response);
+// Aqui você pode redirecionar o usuário para outra rota ou exibir uma mensagem de sucesso
+// this.router.navigate(['/rota-de-sucesso']);
+      },
+      error: (error) => {
+        console.error('Erro ao realizar cadastro:', error);
+// Aqui você pode tratar o erro, como exibir uma mensagem de erro ao usuário
+      }
+    });
   }
 }

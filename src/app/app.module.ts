@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +25,8 @@ import { FormsModule } from "@angular/forms";
     AboutSectionComponent,
     NewsUpdatesComponent,
     RegisterFormComponent,
-    HomeComponent
+    HomeComponent,
+    HttpClient
   ],
   imports: [
     BrowserModule,
