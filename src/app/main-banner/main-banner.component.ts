@@ -13,6 +13,6 @@ export class MainBannerComponent {
   constructor(private router: Router) {}
 
   goToDetailsForm(cpf: string | undefined): void {
-    this.router.navigate(['/details-form'], { queryParams: { cpf: cpf } });
+    this.router.navigate(['/cadastro'], { queryParams: { cpf: cpf } });
   }
 }

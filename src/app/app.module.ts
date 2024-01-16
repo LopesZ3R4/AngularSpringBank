@@ -8,7 +8,7 @@ import { MainBannerComponent } from './main-banner/main-banner.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { NewsUpdatesComponent } from './news-updates/news-updates.component';
-import { DetailsFormComponent } from './details-form/details-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 import { RouterOutlet } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -23,7 +23,7 @@ import { FormsModule } from "@angular/forms";
     ServicesSectionComponent,
     AboutSectionComponent,
     NewsUpdatesComponent,
-    DetailsFormComponent,
+    RegisterFormComponent,
     HomeComponent
   ],
   imports: [

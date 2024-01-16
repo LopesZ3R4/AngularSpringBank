@@ -1,13 +1,13 @@
-// details-form.component.ts
+// register-form.component.ts
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-details-form',
-  templateUrl: './details-form.component.html',
-  styleUrls: ['./details-form.component.scss']
+  selector: 'app-register-form',
+  templateUrl: './register-form.component.html',
+  styleUrls: ['./register-form.component.scss']
 })
-export class DetailsFormComponent implements OnInit {
+export class RegisterFormComponent implements OnInit {
   user = {
     cpf: '',
     fullName: '',

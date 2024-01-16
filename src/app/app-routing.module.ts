@@ -2,12 +2,12 @@
 
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DetailsFormComponent} from './details-form/details-form.component';
+import {RegisterFormComponent} from './register-form/register-form.component';
 import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'details-form', component: DetailsFormComponent},
+  {path: 'cadastro', component: RegisterFormComponent},
   // Add additional routes here as needed
 ];
 
