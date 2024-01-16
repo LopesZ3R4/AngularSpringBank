@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-banner.component.scss']
 })
 export class MainBannerComponent {
+  cpf: string | undefined;
+
   constructor(private router: Router) {}
 
-  goToDetailsForm(cpf: string) {
-    this.router.navigate(['/details-form'], {queryParams: {cpf}});
-   }
+  goToDetailsForm(cpf: string | undefined): void {
+    this.router.navigate(['/details-form'], { queryParams: { cpf: cpf } });
+  }
 }
