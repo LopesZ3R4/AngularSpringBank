@@ -7,7 +7,7 @@
   <div class="signup-invitation">
     <h2>Peça sua conta e cartão de<br>crédito do Spring Bank</h2>
     <form [formGroup]="cpfForm" (ngSubmit)="goToDetailsForm()">
-      <input type="text" formControlName="cpf" mask="000.000.000-00" inputmode="numeric">
+      <input type="text" formControlName="cpf" mask="000.000.000-00" inputmode="numeric" placeholder="123.456.789.10">
       <button type="submit" [disabled]="!cpfForm.valid">Continuar</button>
     </form>
   </div>
