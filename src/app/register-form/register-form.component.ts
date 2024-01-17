@@ -1,5 +1,6 @@
 // register-form.component.ts
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 
@@ -9,13 +10,14 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
-  user = {
-    chavePix: '',
-    accountHolderName: '',
-    cpf: ''
-  };
+  registrationForm = this.fb.group({
+    cpf: ['', Validators.required],
+    accountHolderName: ['', Validators.required],
+    chavePix: ['', Validators.required]
+  });
 
   constructor(
+    private fb: FormBuilder,
     private route: ActivatedRoute,
     private http: HttpClient,
   ) {}
@@ -23,22 +25,29 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (params['cpf']) {
-        this.user.cpf = params['cpf'];
+        // @ts-ignore
+        this.registrationForm.get('cpf').setValue(params['cpf']);
       }
     });
   }
 
   onSubmit(): void {
-    const endpoint = 'http://18.189.140.162:8080/api/useraccount';
-    this.http.post(endpoint, this.user).subscribe({
+    const formValue = { ...this.registrationForm.value };
+
+    // @ts-ignore
+    formValue.cpf = formValue.cpf.replace(/\D/g, '');
+
+    //const endpoint = 'http://18.189.140.162:8080/api/useraccount';
+    const endpoint = 'http://localhost:8080/api/useraccount';
+
+    this.http.post(endpoint, formValue).subscribe({
       next: (response) => {
         console.log('Cadastro realizado com sucesso:', response);
-// Aqui você pode redirecionar o usuário para outra rota ou exibir uma mensagem de sucesso
-// this.router.navigate(['/rota-de-sucesso']);
+        // Redirecionar o usuário ou outras ações pós-cadastro.
       },
       error: (error) => {
         console.error('Erro ao realizar cadastro:', error);
-// Aqui você pode tratar o erro, como exibir uma mensagem de erro ao usuário
+        // Mostrar mensagem de erro ao usuário.
       }
     });
   }
