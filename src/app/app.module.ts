@@ -14,7 +14,7 @@ import { AboutSectionComponent } from './about-section/about-section.component';
 import { NewsUpdatesComponent } from './news-updates/news-updates.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { HomeComponent } from './home/home.component';
-import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
