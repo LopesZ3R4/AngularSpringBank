@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -26,13 +26,13 @@ import { FormsModule } from "@angular/forms";
     NewsUpdatesComponent,
     RegisterFormComponent,
     HomeComponent,
-    HttpClient
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
