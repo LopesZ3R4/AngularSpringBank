@@ -37,8 +37,7 @@ export class RegisterFormComponent implements OnInit {
     // @ts-ignore
     formValue.cpf = formValue.cpf.replace(/\D/g, '');
 
-    //const endpoint = 'http://18.189.140.162:8080/api/useraccount';
-    const endpoint = 'http://localhost:8080/api/useraccount';
+    const endpoint = 'http://18.189.140.162:8080/api/useraccount';
 
     this.http.post(endpoint, formValue).subscribe({
       next: (response) => {
