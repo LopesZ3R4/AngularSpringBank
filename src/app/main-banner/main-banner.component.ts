@@ -10,11 +10,15 @@ import { Router } from '@angular/router';
 })
 export class MainBannerComponent {
   cpfForm: FormGroup;
+  navActive = false;
 
   constructor(private router: Router, private fb: FormBuilder) {
     this.cpfForm = this.fb.group({
       cpf: ['']
     });
+  }
+  toggleNav() {
+    this.navActive = !this.navActive;
   }
 
   goToDetailsForm(): void {
