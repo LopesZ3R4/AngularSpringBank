@@ -15,6 +15,7 @@ import { NewsUpdatesComponent } from './home-page/news-updates/news-updates.comp
 import { RegisterFormComponent } from './home-page/register-form/register-form.component';
 import { HomeComponent } from './home-page/home/home.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { LoginComponent } from './home-page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     NewsUpdatesComponent,
     RegisterFormComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
