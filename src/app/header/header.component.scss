@@ -74,24 +74,24 @@
     }
 
     .hamburger-menu {
-      display: flex; // Show the hamburger menu on mobile
+      display: flex;
     }
   }
-}
 
-// Additional styles when the hamburger menu is active (for example, when a state variable in your component is true)
-.nav-active .nav-links {
-  display: flex;
-}
+  /* Estilos para o menu aberto */
+  .nav-active .nav-links {
+    display: flex;
+  }
 
-.nav-active .hamburger-menu span:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
+  .nav-active .hamburger-menu span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
 
-.nav-active .hamburger-menu span:nth-child(2) {
-  opacity: 0;
-}
+  .nav-active .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+  }
 
-.nav-active .hamburger-menu span:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
+  .nav-active .hamburger-menu span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
 }

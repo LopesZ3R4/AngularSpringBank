@@ -11,5 +11,6 @@ export class HeaderComponent {
 
   toggleNav() {
     this.navActive = !this.navActive;
+    console.log(this.navActive)
   }
 }
