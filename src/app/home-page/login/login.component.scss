@@ -1,0 +1,70 @@
+@import '../../../variables';
+
+/* login-form.component.scss */
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+
+  h2 {
+    text-align: center;
+    color: $heading-color;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+      &:disabled {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    max-width: none;
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    input, button {
+      font-size: 0.9rem;
+    }
+  }
+}
