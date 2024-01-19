@@ -39,13 +39,13 @@
     }
 
     button {
-      background-color: $button-color;
+      background-color: $primary-color;
       color: white;
       border: none;
       cursor: pointer;
       border-radius: 20px;
       &:hover {
-        background-color: darken($button-color, 10%);
+        background-color: darken($primary-color, 10%);
       }
       &:disabled {
         background-color: #ccc;
