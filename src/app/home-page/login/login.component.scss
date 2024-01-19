@@ -1,7 +1,7 @@
 @import '../../../variables';
 
-/* register-form.component.scss */
-.registration-form {
+/* login-form.component.scss */
+.login-form {
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
@@ -28,8 +28,7 @@
     }
 
     input[type="text"],
-    input[type="email"],
-    input[type="tel"],
+    input[type="password"],
     button {
       width: 100%;
       padding: 0.75rem;
@@ -55,7 +54,7 @@
 }
 
 @media (max-width: 768px) {
-  .registration-form {
+  .login-form {
     width: 90%;
     max-width: none;
     padding: 1rem;

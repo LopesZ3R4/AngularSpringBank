@@ -46,7 +46,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: darken($button-color, 10%);
+        background-color: darken($primary-color, 10%);
       }
 
       &:disabled {
