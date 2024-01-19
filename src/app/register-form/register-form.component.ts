@@ -19,7 +19,7 @@ export class RegisterFormComponent implements OnInit {
   ) {
     this.registrationForm = this.fb.group({
       cpf: ['', [Validators.required]],
-      accountHolderName: ['', [Validators.required, Validators.pattern(/^[a-zA-ZÀ-ÿ]+ [a-zA-ZÀ-ÿ]+$/)]],
+      accountHolderName: ['', [Validators.required, Validators.pattern(/^[a-zA-ZÀ-ÿ]+ [a-zA-ZÀ-ÿ]{2,}$/)]],
       chavePix: this.fb.group({
         type: ['cpf', Validators.required],
         valor: [''],
