@@ -6,14 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MainBannerComponent } from './main-banner/main-banner.component';
-import { ServicesSectionComponent } from './services-section/services-section.component';
-import { AboutSectionComponent } from './about-section/about-section.component';
-import { NewsUpdatesComponent } from './news-updates/news-updates.component';
-import { RegisterFormComponent } from './register-form/register-form.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { MainBannerComponent } from './home-page/main-banner/main-banner.component';
+import { ServicesSectionComponent } from './home-page/services-section/services-section.component';
+import { AboutSectionComponent } from './home-page/about-section/about-section.component';
+import { NewsUpdatesComponent } from './home-page/news-updates/news-updates.component';
+import { RegisterFormComponent } from './home-page/register-form/register-form.component';
+import { HomeComponent } from './home-page/home/home.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
