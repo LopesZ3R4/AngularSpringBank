@@ -1,9 +1,14 @@
-$accent-color: #3498db; // Accent color for interactive elements
-$font-primary: 'Arial', sans-serif; // Primary font for the app
-$background-base: #f5f5f5; // Base background color
-$background-alt: #e9e9e9; // Alternate background color for sectioned areas
-$background-accent: #d9d9d9; // Background color for highlighted sections
-$text-color: #333; // Primary text color
-$heading-color: #2c3e50; // Color for headings
-$button-color: #0056b3;
-$primary-color: #4caf50;
+$primary-color: #4caf50; // Verde primário para banners e botões
+$secondary-color: #f5f5f5; // Um cinza claro para fundos e seções
+$accent-color: #3498db; // Azul para elementos interativos e links
+$text-color: #333; // Cor de texto primária para legibilidade
+$heading-color: #2c3e50; // Cor escura para títulos e cabeçalhos
+$background-base: #ffffff; // Branco como cor de fundo base
+$background-alt: #f5f5f5; // Alternativa de fundo para seções diferenciadas
+$button-color: #4caf50; // Cor do botão para combinar com o esquema de cores primário
+$error-color: #e74c3c; // Cor para mensagens de erro ou ações críticas
+$info-color: #3498db; // Cor para mensagens informativas
+$success-color: #2ecc71; // Cor para mensagens de sucesso
+$warning-color: #f1c40f; // Cor para alertas e avisos
+$content-max-width: 1200px; // Largura máxima para o conteúdo centralizado
+$font-primary: black;

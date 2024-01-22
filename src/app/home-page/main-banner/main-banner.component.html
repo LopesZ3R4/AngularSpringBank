@@ -1,14 +1,16 @@
-<!-- main-banner.component.html -->
 <div class="main-banner">
-  <div class="welcome-text">
-    <h1>Bem-vindo ao Spring Bank</h1>
-    <p>Seu parceiro financeiro de confiança.</p>
+  <div class="banner-background">
+    <img src="assets/muie%20do%20banco.svg" alt="Woman holding cards" />
   </div>
-  <div class="signup-invitation">
-    <h2>Peça sua conta e cartão de<br>crédito do Spring Bank</h2>
-    <form [formGroup]="cpfForm" (ngSubmit)="goToDetailsForm()">
-      <input type="text" formControlName="cpf" mask="000.000.000-00" inputmode="numeric" placeholder="123.456.789.10">
-      <button type="submit" [disabled]="!cpfForm.valid">Continuar</button>
-    </form>
+    <div class="welcome-text">
+      <h1>Bem-vindo ao <span>Spring Bank</span></h1>
+      <p>Seu parceiro financeiro de confiança.</p>
+    </div>
+    <div class="cta-container">
+      <h2>Peça sua conta e cartão de crédito do <span>Spring Bank</span></h2>
+      <form [formGroup]="cpfForm" (ngSubmit)="goToDetailsForm()">
+        <input type="text" formControlName="cpf" mask="000.000.000-00" inputmode="numeric" placeholder="123.456.789-10">
+        <button type="submit" [disabled]="!cpfForm.valid">Continuar</button>
+      </form>
   </div>
 </div>
