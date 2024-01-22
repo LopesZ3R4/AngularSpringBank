@@ -1,56 +1,87 @@
 @import '../../../variables';
 
 .main-banner {
+  background-color: $background-base;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 2rem;
-  background-color: $primary-color;
-  color: white;
+  padding: 2rem 1rem;
 
-  .welcome-text {
-    // Style for welcome text if needed
-  }
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 
-  .signup-invitation {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
+    h1, h2, p {
+      color: #000000;
+      span {
+        color: $primary-color;
+      }
+    }
 
     h2 {
-      color: black;
+      color: #000000;
       font-size: 1.25rem;
+      margin-bottom: 1rem;
+
+      span {
+        color: $primary-color;
+      }
     }
+
+    p {
+      font-size: 1.5rem;
+      color: $text-color;
+      margin-top: 0;
+    }
+  }
+
+  .banner-background {
+    background-size: 231.071% 100%;
+    background: $primary-color url('../../../assets/muie do banco.png') no-repeat -226.286px 0px;
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+  }
+
+  .cta-container {
+    background-color: #ffffff;
+    border: 1px solid $primary-color;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-    }
+      gap: 1rem;
 
-    input {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      padding: 0.5rem;
-      background-color: $primary-color;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: darken($primary-color, 10%);
+      input {
+        padding: 1rem;
+        border: 1px solid $primary-color;
+        border-radius: 4px;
+        font-size: 1rem;
       }
 
-      &:disabled {
-        background-color: #ccc;
+      button {
+        padding: 1rem 2rem;
+        background-color: $button-color;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($button-color, 10%);
+        }
+
+        &:disabled {
+          background-color: #ccc;
+        }
       }
     }
   }
@@ -59,22 +90,25 @@
 @media (max-width: 768px) {
   .main-banner {
     flex-direction: column;
-    align-items: stretch;
+    gap: 1rem;
 
-    .welcome-text {
+    .content {
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      margin-bottom: 1rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
     }
 
-    .signup-invitation {
+    .cta-container {
       width: 90%;
-      margin: 0 auto;
-      form {
-        width: auto;
-      }
-      input, button {
-        font-size: 0.8rem;
-      }
+      margin: 1rem auto;
     }
   }
 }
