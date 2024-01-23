@@ -1,14 +1,19 @@
 <!-- header.component.html -->
-<nav class="navbar" [class.nav-active]="navActive">
-  <a href="#" class="logo">Spring Bank</a>
-  <button class="hamburger-menu" (click)="toggleNav()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="nav-links">
-    <a routerLink="/login">Login</a>
-    <a href="#services">Services</a>
-    <a href="#about">About Us</a>
+<nav class="navbar">
+  <div class="top-header">
+    <div class="logo-container">
+      <img alt="Spring Bank Logo" class="logo" routerLink="/" src="assets/logo.png">
+    </div>
+    <button (click)="toggleNav()" class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+  <div [class.active]="navActive" class="nav-links">
+    <a routerLink="/">Início</a>
+    <a routerLink="/services">Serviços</a>
+    <a routerLink="/about">Sobre nós</a>
+  </div>
+  <button [class.active]="navActive" class="login-button">Login</button>
 </nav>
