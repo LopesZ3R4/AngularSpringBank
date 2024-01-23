@@ -1,7 +1,16 @@
 <!-- services-section.component.html -->
-<div class="services-section">
-  <div class="service-card" *ngFor="let service of services">
-    <h3>{{ service.title }}</h3>
-    <p>{{ service.description }}</p>
+<div class="services-container">
+  <div class="services-header">
+    <h2>Tudo que oferecemos<br>e muito mais!</h2>
+    <p>Serviços que vão mudar sua vida financeira <span class="highlight">do zero</span> e te trazer <span class="highlight">mais controle</span> de suas finanças</p>
+  </div>
+  <div class="services-list">
+    <div class="service-card" *ngFor="let service of services">
+      <div class="icon-container">
+        <img src="assets/{{ service.iconPath }}.svg" alt="{{ service.title }}" />
+      </div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
   </div>
 </div>
