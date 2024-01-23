@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ServicesSectionComponent {
   services = [
-    { title: 'Conta Poupança', description: 'Poupança segura e com alta rentabilidade.' },
-    { title: 'Empréstimos Pessoais', description: 'Opções de empréstimo flexíveis e fáceis.' },
-    { title: 'Cartões de Crédito', description: 'Convenientes e vantajosos.' },
+    { title: 'Conta Poupança', description: 'Poupança segura e com alta rentabilidade.', iconPath: 'conta' },
+    { title: 'Empréstimos Pessoais', description: 'Opções de empréstimo flexíveis e fáceis.', iconPath: 'emprestimo' },
+    { title: 'Cartões de Crédito', description: 'Convenientes e vantajosos.', iconPath: 'cartao' },
   ];
 }
